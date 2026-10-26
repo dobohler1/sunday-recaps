@@ -1,0 +1,93 @@
+/* Sunday Recaps — shared stylesheet.
+   One reading column; condensed poster type for headings; a highly legible body face.
+   Every color is a token so light and dark both work. */
+:root{
+  --bg:#f4f6f8; --fg:#162029; --muted:#5b6873; --accent:#0e6b6b; --accent-fg:#ffffff;
+  --field:#e6ecef; --rule:#cfd8de; --input:#ffffff;
+  --display:"Barlow Condensed","Arial Narrow",Impact,sans-serif;
+  --body:"Atkinson Hyperlegible",Verdana,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121a21; --fg:#e8edf1; --muted:#9fadb8; --accent:#4fc2b8; --accent-fg:#0b1418;
+  --field:#1b2630; --rule:#30404c; --input:#0f161c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121a21; --fg:#e8edf1; --muted:#9fadb8; --accent:#4fc2b8; --accent-fg:#0b1418;
+  --field:#1b2630; --rule:#30404c; --input:#0f161c; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:1.1rem;line-height:1.6;
+  padding-block:0;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+img{max-width:100%}
+[hidden]{display:none!important}
+a{color:var(--accent)}
+main{max-width:40rem;margin:0 auto;padding-block:1.5rem 5rem}
+
+/* site nav */
+.nav{display:flex;flex-wrap:wrap;align-items:baseline;gap:.4rem 1rem;padding-block:.6rem;margin-bottom:2rem;border-bottom:1px solid var(--rule)}
+.nav a{font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--fg)}
+.nav a.home::before{content:"\2190\00a0";color:var(--accent)}
+.nav .crumb{color:var(--muted);font-size:.95rem}
+
+/* headings & text */
+header.page{display:flex;flex-direction:column;gap:.4rem;margin-bottom:2rem}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:.95rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.6rem,9vw,4rem);line-height:.95;margin:0;letter-spacing:-.01em;text-wrap:balance}
+h1 a{color:inherit;text-decoration:none;border-bottom:4px solid var(--accent)}
+h1 a:hover,h1 a:focus-visible{color:var(--accent)}
+.sub{color:var(--muted);margin:0;font-size:1rem}
+h2{font-family:var(--display);font-weight:700;font-size:1.7rem;line-height:1.1;margin:2.6rem 0 .7rem;text-wrap:balance}
+h2 .n{color:var(--accent);margin-right:.35em}
+p{margin:0 0 1em;text-wrap:pretty}
+ul.points{padding-left:1.2rem;margin:0 0 1em}
+ul.points li{margin-bottom:.6em}
+.big{font-family:var(--display);font-weight:700;font-size:1.6rem;line-height:1.15;color:var(--accent);margin:1.4rem 0 1.8rem;padding-left:1rem;border-left:5px solid var(--accent);text-wrap:balance}
+.small{color:var(--muted);font-size:.9rem;border-top:1px solid var(--rule);padding-top:1rem;margin-top:2.5rem}
+
+/* meta rows (sermon pages) */
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem;margin:0 0 1.5rem;font-size:1rem}
+dl.meta dt{font-family:var(--display);font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-size:.9rem;padding-top:.15em}
+dl.meta dd{margin:0;min-width:0}
+
+/* sermon index list */
+ol.sermons{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem}
+ol.sermons li{margin:0}
+.card{display:block;text-decoration:none;color:inherit;background:var(--field);border-radius:14px;padding:1.1rem 1.2rem;border:2px solid transparent}
+.card:hover,.card:focus-visible{border-color:var(--accent)}
+.card .date{font-family:var(--display);font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-size:.9rem}
+.card .title{font-family:var(--display);font-weight:700;font-size:1.9rem;line-height:1;margin:.2rem 0 .35rem}
+.card .by{color:var(--muted);font-size:.98rem;margin:0}
+.card .tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.tag{font-family:var(--display);font-weight:600;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;padding:.2rem .6rem;border-radius:999px;border:1.5px solid var(--rule);color:var(--muted)}
+.tag.on{border-color:var(--accent);color:var(--accent)}
+
+/* call-to-action block */
+.cta{background:var(--field);border-radius:14px;padding:1.3rem 1.2rem;margin-top:2.5rem;display:flex;flex-direction:column;gap:.6rem}
+.cta h2{margin:0}
+.cta p{margin:0}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.15rem;letter-spacing:.05em;text-transform:uppercase;padding:.6rem 1.2rem;border-radius:10px;border:2px solid var(--accent);background:var(--accent);color:var(--accent-fg);cursor:pointer;text-decoration:none;align-self:flex-start}
+.btn.quiet{background:transparent;color:var(--fg);border-color:var(--rule)}
+
+/* activity block */
+.turn{background:var(--field);border-radius:14px;padding:1.4rem 1.2rem;margin-top:3rem;display:flex;flex-direction:column;gap:1.2rem}
+.turn h2{margin:0}
+.turn p{margin:0}
+.who{display:flex;flex-direction:column;gap:.4rem}
+.who label{font-weight:700}
+.who input{width:100%;max-width:18rem;font:inherit;font-size:1.05rem;padding:.55rem .8rem;border:2px solid var(--rule);border-radius:10px;background:var(--input);color:var(--fg)}
+.who small{color:var(--muted);font-size:.9rem}
+.q{display:flex;flex-direction:column;gap:.5rem}
+.q label{font-weight:700;line-height:1.4}
+.q label b{color:var(--accent);margin-right:.3em}
+textarea{width:100%;min-height:6.5rem;font:inherit;font-size:1.05rem;line-height:1.5;padding:.7rem .8rem;border:2px solid var(--rule);border-radius:10px;background:var(--input);color:var(--fg);resize:vertical}
+textarea:focus,input:focus,button:focus-visible,a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.actions{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center}
+.status{color:var(--muted);font-size:.95rem;min-height:1.4em}
+.out{display:flex;flex-direction:column;gap:.5rem}
+.out p{color:var(--muted);font-size:.95rem}
+pre{margin:0;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:1rem;background:var(--input);border:2px dashed var(--rule);border-radius:10px;padding:.9rem 1rem;user-select:all}
+
+@media (prefers-reduced-motion:no-preference){.btn,.card{transition:background .15s,color .15s,border-color .15s}}
+@media (max-width:480px){dl.meta{grid-template-columns:1fr;gap:.1rem}dl.meta dd{margin-bottom:.5rem}}
+@media print{body{background:#fff;color:#000}.nav,.actions,.out{display:none}.turn,.card,.cta{border:1px solid #999}}
