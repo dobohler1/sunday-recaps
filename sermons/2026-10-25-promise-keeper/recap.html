@@ -12,7 +12,7 @@
 </head>
 <body>
 <main>
-<nav class="nav"><a class="home" href="./">Promise Keeper</a><span class="crumb">Recap and activity</span></nav>
+<nav class="nav"><a class="home" href="./">Promise Keeper</a><span class="crumb">Recap and activity</span><button class="print" type="button" id="printbtn">Print</button></nav>
 
 <header class="page">
   <div class="eyebrow">From the sermon "Promise Keeper"</div>
@@ -54,9 +54,88 @@
 <p>The sermon was called "Promise Keeper." Abraham lied. Isaac lied. Jacob was a liar most of his life. And God kept every promise to all three of them anyway. Not because the lying didn't matter. Because God's promises were bigger than their worst moments, and God stayed with them while they were still messed up.</p>
 <p>Jacob came out of his hardest night with a new name and a limp. The limp never went away. The things you've done leave a mark, and that's honest. But the mark is not the end of your story, and you are never in it alone.</p>
 
+<section class="turn" id="check">
+  <div>
+    <div class="eyebrow">Part 1</div>
+    <h2>Did you get it?</h2>
+  </div>
+  <p>Six questions about what you just read. These aren't about remembering names. They're about whether you caught the point. Pick the best answer, then tap <strong>Check my answers</strong>. You'll see why each one is right or wrong.</p>
+
+  <fieldset class="mc" id="m1">
+    <legend><b>1.</b> The reading says most lies are "scared lies." Which answer best explains what that means?</legend>
+    <label><input type="radio" name="m1" value="a"><span>People who lie are cowards.</span></label>
+    <label><input type="radio" name="m1" value="b"><span>Right before most lies, the person is afraid of what will happen if they tell the truth.</span></label>
+    <label><input type="radio" name="m1" value="c"><span>Only scared people lie. Confident people don't.</span></label>
+    <label><input type="radio" name="m1" value="d"><span>Lying is a good way to stop being afraid.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <fieldset class="mc" id="m2">
+    <legend><b>2.</b> Why does the reading bring up Sarah?</legend>
+    <label><input type="radio" name="m2" value="a"><span>To show that she lied too.</span></label>
+    <label><input type="radio" name="m2" value="b"><span>To show that Abraham's lie protected him but put someone else in danger.</span></label>
+    <label><input type="radio" name="m2" value="c"><span>To show that Abraham loved her.</span></label>
+    <label><input type="radio" name="m2" value="d"><span>To explain why Abraham had to leave his country.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <fieldset class="mc" id="m3">
+    <legend><b>3.</b> Isaac told the same lie his father told. What point is the reading making with that?</legend>
+    <label><input type="radio" name="m3" value="a"><span>Isaac copied his dad on purpose because it worked.</span></label>
+    <label><input type="radio" name="m3" value="b"><span>Lying runs in families through blood, like eye color.</span></label>
+    <label><input type="radio" name="m3" value="c"><span>Habits get passed down just by watching, even when nobody means to teach them.</span></label>
+    <label><input type="radio" name="m3" value="d"><span>Isaac was a worse person than Abraham.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <fieldset class="mc" id="m4">
+    <legend><b>4.</b> Jacob tricked his father with a goat. Years later his sons tricked him with goat's blood. What is the reading saying with that pair?</legend>
+    <label><input type="radio" name="m4" value="a"><span>It was a coincidence.</span></label>
+    <label><input type="radio" name="m4" value="b"><span>What you put out tends to come back around to you.</span></label>
+    <label><input type="radio" name="m4" value="c"><span>Jacob's sons were worse than Jacob.</span></label>
+    <label><input type="radio" name="m4" value="d"><span>Goats were important in that family.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <fieldset class="mc" id="m5">
+    <legend><b>5.</b> What made Judah the one who "broke the pattern"?</legend>
+    <label><input type="radio" name="m5" value="a"><span>He never lied in the first place.</span></label>
+    <label><input type="radio" name="m5" value="b"><span>He was the oldest brother, so it was his job.</span></label>
+    <label><input type="radio" name="m5" value="c"><span>He got a second chance to do the same wrong thing, and chose differently even though it would cost him.</span></label>
+    <label><input type="radio" name="m5" value="d"><span>He said sorry to Joseph.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <fieldset class="mc" id="m6">
+    <legend><b>6.</b> The reading says lying and going quiet are "cousins." Why?</legend>
+    <label><input type="radio" name="m6" value="a"><span>Quiet people tell more lies.</span></label>
+    <label><input type="radio" name="m6" value="b"><span>Both are ways of hiding what's really going on.</span></label>
+    <label><input type="radio" name="m6" value="c"><span>Both make you feel better.</span></label>
+    <label><input type="radio" name="m6" value="d"><span>Both are things Joseph did.</span></label>
+    <div class="fb" hidden></div>
+  </fieldset>
+
+  <div class="actions">
+    <button class="btn" type="button" id="checkbtn">Check my answers</button>
+    <span class="status" id="score" aria-live="polite"></span>
+  </div>
+
+  <div class="q">
+    <label for="s1"><b>7.</b> In your own words: why does the reading say asking "what was I afraid of?" is more useful than just telling yourself "stop lying"?</label>
+    <textarea id="s1" placeholder="Because…"></textarea>
+  </div>
+  <div class="q">
+    <label for="s2"><b>8.</b> The reading says a lie "charges it to somebody else's account." Explain what that means using an example from real life, not from the Bible story.</label>
+    <textarea id="s2" placeholder="For example, if…"></textarea>
+  </div>
+</section>
+
 <section class="turn" id="turn">
-  <h2>Your turn</h2>
-  <p>Type your answers here. Honest beats impressive. Nothing you type leaves your phone or computer until you choose to send it. When you're done, tap <strong>Copy my answers</strong> and paste them into a text to whoever gave you this link.</p>
+  <div>
+    <div class="eyebrow">Part 2</div>
+    <h2>Your turn</h2>
+  </div>
+  <p>Now make it personal. Honest beats impressive. Nothing you type leaves your phone or computer until you choose to send it.</p>
   <div class="who">
     <label for="who">Name or nickname <small>(optional, you can leave this blank)</small></label>
     <input id="who" type="text" autocomplete="off" maxlength="40" placeholder="Leave blank to stay anonymous">
@@ -73,6 +152,7 @@
     <label for="a3"><b>3.</b> What's one true thing you've been sitting on that you could say out loud this week, and to whom? What do you think would actually happen if you did?</label>
     <textarea id="a3" placeholder="One true thing is…"></textarea>
   </div>
+  <p>When you're done with both parts, tap <strong>Copy my answers</strong> and paste them into a text to whoever gave you this link.</p>
   <div class="actions">
     <button class="btn" type="button" id="copy">Copy my answers</button>
     <button class="btn quiet" type="button" id="clear">Start over</button>
@@ -89,36 +169,90 @@
 
 <script>
 (function(){
-  var KEY="promise-keeper-answers";
-  var ids=["who","a1","a2","a3"];
-  var status=document.getElementById("status");
+  var KEY="promise-keeper-answers-v2";
+  var MC={
+    m1:{ok:"b",why:{a:"The reading says the opposite: lying is usually a scared reflex, not proof of a bad character.",b:"Yes. The lie comes from fear of what the truth will cost. That's why the reading says “find the fear.”",c:"Too strong. The reading says fear is under most lies, not that only certain kinds of people lie.",d:"The reading says the lie buys an hour of safety and then costs more later. It doesn't cure the fear."}},
+    m2:{ok:"b",why:{a:"Sarah doesn't lie in the reading. She's the one who pays for Abraham's lie.",b:"Yes. The lie protected Abraham and put Sarah at risk. That's the point of section 2: a lie lands on someone else.",c:"Not the point being made. The reading uses Sarah to show who paid for the lie.",d:"Abraham left before the lie. Sarah is mentioned to show who the lie hurt."}},
+    m3:{ok:"c",why:{a:"The reading says nobody taught Isaac to lie. He just watched his dad, “and it went in.”",b:"The reading says it's handed down by watching, not inherited like a physical trait.",c:"Yes. Patterns pass down by example, even when nobody intends it. That's why “somebody younger is watching.”",d:"The reading doesn't rank them. The point is the pattern repeating, not who was worse."}},
+    m4:{ok:"b",why:{a:"The reading sets the two goats side by side on purpose. It's a mirror, not an accident.",b:"Yes. “We reap what we sow.” What Jacob did to his father came back to him from his sons.",c:"The reading doesn't compare how bad they were. It shows the deception coming back around.",d:"The goats are the mirror image, not the subject."}},
+    m5:{ok:"c",why:{a:"Judah was part of the original lie about Joseph. That's what makes his choice matter.",b:"Judah wasn't the oldest, and birth order isn't the point. His choice is.",c:"Yes. Same situation, second time, different choice, at a real cost to himself. That's what breaking a pattern looks like.",d:"An apology isn't what the reading points to. It points to what Judah did when he could have repeated the wrong."}},
+    m6:{ok:"b",why:{a:"The reading doesn't say quiet people lie more. It says silence and lying do the same job.",b:"Yes. Both hide what's really going on, which is why the goal is to say the hard true thing out loud.",c:"The reading says silence did the damage in Abraham and Isaac's story. It didn't make anything better.",d:"Joseph is the example of the opposite: he cried out loud and told the truth."}}
+  };
+  var mcIds=Object.keys(MC);
+  var textIds=["who","s1","s2","a1","a2","a3"];
+  var status=document.getElementById("status"), score=document.getElementById("score");
   var out=document.getElementById("out"), pre=document.getElementById("pre");
-  var state={who:"",a1:"",a2:"",a3:""};
+  var state={checked:false};
+  textIds.forEach(function(id){state[id]="";}); mcIds.forEach(function(id){state[id]="";});
 
   function load(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&typeof s==="object") state=Object.assign(state,s); }catch(e){} }
   function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
-  function paint(){ ids.forEach(function(id){ document.getElementById(id).value=state[id]||""; }); }
-  function questionText(id){ return document.querySelector('label[for="'+id+'"]').textContent.replace(/^\s*\d\.\s*/,"").trim(); }
+  function paint(){
+    textIds.forEach(function(id){ document.getElementById(id).value=state[id]||""; });
+    mcIds.forEach(function(id){
+      var r=document.querySelector('input[name="'+id+'"][value="'+state[id]+'"]'); if(r) r.checked=true;
+    });
+    if(state.checked) showFeedback();
+  }
+  function showFeedback(){
+    var right=0, answered=0;
+    mcIds.forEach(function(id){
+      var fs=document.getElementById(id), fb=fs.querySelector(".fb"), pick=state[id];
+      fs.classList.remove("right","wrong");
+      if(!pick){ fb.hidden=true; return; }
+      answered++;
+      var ok=pick===MC[id].ok; if(ok) right++;
+      fs.classList.add(ok?"right":"wrong");
+      fb.textContent=(ok?"Correct. ":"Not quite. ")+MC[id].why[pick]; fb.hidden=false;
+    });
+    if(answered<mcIds.length){ score.textContent="You've answered "+answered+" of "+mcIds.length+". Answer them all, then check again."; }
+    else if(right===mcIds.length){ score.textContent="6 of 6. You caught every point."; }
+    else { score.textContent=right+" of 6. Read the feedback, then fix the ones you missed and check again."; }
+  }
+  function questionText(sel){ return document.querySelector(sel).textContent.replace(/^\s*\d\.\s*/,"").trim(); }
+  function mcLine(id){
+    var pick=state[id]; if(!pick) return "(not answered)";
+    var lab=document.querySelector('input[name="'+id+'"][value="'+pick+'"]').parentNode.querySelector("span").textContent;
+    return (pick===MC[id].ok?"✓ ":"✗ ")+lab;
+  }
   function message(){
     var who=(state.who||"").trim();
     var lines=[(who? who+"'s" : "My")+" answers from \"Promise Keeper\"",""];
+    var right=mcIds.filter(function(id){return state[id]===MC[id].ok;}).length;
+    lines.push("PART 1: DID YOU GET IT?  ("+right+" of 6 correct)");
+    mcIds.forEach(function(id,i){ lines.push((i+1)+". "+mcLine(id)); });
+    lines.push("");
+    [["s1",7],["s2",8]].forEach(function(x){
+      lines.push(x[1]+". "+questionText('label[for="'+x[0]+'"]'));
+      lines.push((state[x[0]]||"").trim()||"(no answer yet)"); lines.push("");
+    });
+    lines.push("PART 2: YOUR TURN");
     ["a1","a2","a3"].forEach(function(id,i){
-      lines.push((i+1)+". "+questionText(id));
-      lines.push((state[id]||"").trim()? state[id].trim() : "(no answer yet)");
-      lines.push("");
+      lines.push((i+1)+". "+questionText('label[for="'+id+'"]'));
+      lines.push((state[id]||"").trim()||"(no answer yet)"); lines.push("");
     });
     return lines.join("\n").trim();
   }
 
-  load(); paint();
+  function fit(el){ el.style.height="auto"; el.style.height=(el.scrollHeight+2)+"px"; }
+  function fitAll(){ Array.prototype.forEach.call(document.querySelectorAll("textarea"),fit); }
+  load(); paint(); fitAll();
+  window.addEventListener("beforeprint",fitAll);
+  var pb=document.getElementById("printbtn"); if(pb) pb.addEventListener("click",function(){ fitAll(); window.print(); });
 
   var timer=null;
-  ids.forEach(function(id){
+  textIds.forEach(function(id){
     document.getElementById(id).addEventListener("input",function(e){
-      state[id]=e.target.value;
+      state[id]=e.target.value; if(e.target.tagName==="TEXTAREA") fit(e.target);
       clearTimeout(timer); timer=setTimeout(function(){ save(); status.textContent="Saved on this device."; },400);
     });
   });
+  mcIds.forEach(function(id){
+    document.getElementById(id).addEventListener("change",function(e){
+      if(e.target.name===id){ state[id]=e.target.value; save(); if(state.checked){ showFeedback(); } }
+    });
+  });
+  document.getElementById("checkbtn").addEventListener("click",function(){ state.checked=true; save(); showFeedback(); });
 
   document.getElementById("copy").addEventListener("click",function(){
     var text=message();
@@ -133,7 +267,10 @@
   document.getElementById("clear").addEventListener("click",function(){
     var self=this;
     if(self.dataset.armed!=="1"){ self.dataset.armed="1"; self.textContent="Really start over?"; status.textContent="Tap again to erase your answers."; setTimeout(function(){ self.dataset.armed=""; self.textContent="Start over"; },4000); return; }
-    state={who:"",a1:"",a2:"",a3:""}; save(); paint(); out.hidden=true; pre.textContent=""; self.dataset.armed=""; self.textContent="Start over"; status.textContent="Cleared.";
+    state={checked:false}; textIds.forEach(function(id){state[id]="";}); mcIds.forEach(function(id){state[id]="";});
+    save(); document.querySelectorAll('input[type="radio"]').forEach(function(r){r.checked=false;});
+    mcIds.forEach(function(id){ var fs=document.getElementById(id); fs.classList.remove("right","wrong"); fs.querySelector(".fb").hidden=true; });
+    score.textContent=""; paint(); out.hidden=true; pre.textContent=""; self.dataset.armed=""; self.textContent="Start over"; status.textContent="Cleared.";
   });
 })();
 </script>

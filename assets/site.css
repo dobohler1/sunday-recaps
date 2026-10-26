@@ -88,6 +88,40 @@ textarea:focus,input:focus,button:focus-visible,a:focus-visible{outline:3px soli
 .out p{color:var(--muted);font-size:.95rem}
 pre{margin:0;white-space:pre-wrap;word-break:break-word;font:inherit;font-size:1rem;background:var(--input);border:2px dashed var(--rule);border-radius:10px;padding:.9rem 1rem;user-select:all}
 
+/* multiple-choice check */
+.mc{border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:.45rem;min-width:0}
+.mc legend{font-weight:700;line-height:1.4;padding:0;margin-bottom:.4rem}
+.mc legend b{color:var(--accent);margin-right:.3em}
+.mc label{display:flex;gap:.6rem;align-items:flex-start;padding:.5rem .7rem;border:2px solid var(--rule);border-radius:10px;background:var(--input);cursor:pointer;line-height:1.4}
+.mc label:has(input:checked){border-color:var(--accent)}
+.mc input{margin:.3em 0 0;flex:none;accent-color:var(--accent)}
+.mc .fb{font-size:.98rem;padding:.6rem .8rem;border-radius:10px;border-left:5px solid var(--rule);background:var(--input)}
+.mc.right .fb{border-left-color:var(--accent)}
+.mc.wrong .fb{border-left-color:#c0392b}
+.mc.wrong label:has(input:checked){border-color:#c0392b}
+.nav .print{margin-left:auto;font-size:.95rem;letter-spacing:.06em;color:var(--accent);background:none;border:0;padding:0;cursor:pointer;font-family:var(--display);font-weight:700;text-transform:uppercase}
+
 @media (prefers-reduced-motion:no-preference){.btn,.card{transition:background .15s,color .15s,border-color .15s}}
 @media (max-width:480px){dl.meta{grid-template-columns:1fr;gap:.1rem}dl.meta dd{margin-bottom:.5rem}}
-@media print{body{background:#fff;color:#000}.nav,.actions,.out{display:none}.turn,.card,.cta{border:1px solid #999}}
+@media print{
+  @page{margin:.7in}
+  html{padding:0}
+  body{background:#fff;color:#000;font-size:11pt;line-height:1.45;padding-left:0;padding-right:0}
+  main{max-width:none;padding-block:0}
+  a{color:#000}
+  h1{font-size:28pt}
+  h1 a{border-bottom-width:2px}
+  h2{font-size:15pt;margin-top:1.3rem;break-after:avoid}
+  .big{font-size:13pt;color:#000;border-left-color:#000;margin:.8rem 0 1rem}
+  .eyebrow,.card .date,.card .title,.tag.on,.q label b,.mc legend b,h2 .n{color:#000}
+  .nav,.actions,.out,.fb,.status,.cta .btn{display:none!important}
+  .turn,.card,.cta{background:none;border:1px solid #000;border-radius:6px;padding:.8rem .9rem;margin-top:1rem;gap:.8rem}
+  #check{break-before:page}
+  .q,.mc,.who{break-inside:avoid}
+  .mc label{border:1px solid #777;background:none;padding:.3rem .5rem}
+  .mc input{appearance:none;-webkit-appearance:none;width:.8em;height:.8em;border:1.5px solid #000;border-radius:50%;margin-top:.35em}
+  .mc input:checked{background:#000}
+  .who input{border:0;border-bottom:1px solid #000;border-radius:0;background:none;max-width:22rem}
+  textarea{border:1px solid #000;border-radius:4px;background:repeating-linear-gradient(to bottom,transparent 0,transparent calc(1.5em - 1px),#aaa calc(1.5em - 1px),#aaa 1.5em);background-origin:content-box;min-height:9em;line-height:1.5em;resize:none;overflow:visible;color:#000}
+  .small{color:#000;border-top-color:#000}
+}
